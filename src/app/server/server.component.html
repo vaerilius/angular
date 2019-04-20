@@ -1,3 +1,4 @@
-<p>{{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}</p>
 
-<h1>test push from atom</h1>
+<p [ngStyle]="{backgroundColor: getColor()}">
+  {{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}
+</p>
