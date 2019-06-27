@@ -9,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ContainerComponent } from './container/container.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 
 // @ts-ignore
@@ -18,7 +19,8 @@ import { ContactComponent } from './contact/contact.component';
     NavbarComponent,
     ContainerComponent,
     FooterComponent,
-    ContactComponent
+    ContactComponent,
+    ProjectsComponent
 
   ],
   imports: [
