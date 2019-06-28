@@ -10,6 +10,7 @@ import { ContainerComponent } from './container/container.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { AboutComponent } from './about/about.component';
 
 
 // @ts-ignore
@@ -20,7 +21,8 @@ import { ProjectsComponent } from './projects/projects.component';
     ContainerComponent,
     FooterComponent,
     ContactComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    AboutComponent
 
   ],
   imports: [
