@@ -1,5 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 
+
+
+
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -10,8 +13,10 @@ export class ContactComponent implements OnInit {
   email: string;
   phone: string;
   message: string;
+  form: string;
 
   constructor() {
+    this.form = 'email.php';
   }
 
   ngOnInit() {
@@ -20,7 +25,7 @@ export class ContactComponent implements OnInit {
   processForm() {
     const allInfo = `My name is ${this.name}. My email is ${this.email}. My message is ${this.message}`;
     console.log(allInfo);
-    
+    this.sendMail(allInfo);
     this.clearFields();
   }
 
@@ -31,4 +36,7 @@ export class ContactComponent implements OnInit {
     this.message = '';
   }
 
+  private sendMail(allInfo: string) {
+
+  }
 }
