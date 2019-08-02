@@ -1,82 +1,37 @@
-
 <?php
-if(isset($_POST['email'])) {
- 
-    // EDIT THE 2 LINES BELOW AS REQUIRED
-    $email_to = "timo.tamminen@vaerilius.fi";
-    $email_subject = "yhteydenotto!";
- 
-    function died($error) {
-        // your error code can go here
-        echo "We are very sorry, but there were error(s) found with the form you submitted. ";
-        echo "These errors appear below.<br /><br />";
-        echo $error."<br /><br />";
-        echo "Please go back and fix these errors.<br /><br />";
-        die();
-    }
- 
- 
-    // validation expected data exists
-    if(!isset($_POST['name']) 
-        !isset($_POST['email'])  ||
-        !isset($_POST['message'])) {
-        died('We are sorry, but there appears to be a problem with the form you submitted.');
-    }
- 
+    header('Content-type: application/json');
+    header("Access-Control-Allow-Origin: *");
+    header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+    $request = json_decode(file_get_contents("php://input"));
+    $from_email = "timo.tamminen@vaerilius.fi";
 
- 
-    $name = $_POST['name']; // required
-    $email = $_POST['email']; // required
+    $message = "Welcome.";
 
-    $message = $_POST['message']; // not required
+    $from_name = "your name goes here";
 
- 
-    $error_message = "";
-    $emailexp = '/^[A-Za-z0-9.%-]+@[A-Za-z0-9.-]+.[A-Za-z]{2,4}$/';
-if(!preg_match($email_exp,$email)) {
-    $error_message .= 'The Email address you entered does not appear to be valid.<br />';
-  }
- 
-    $string_exp = "/^[A-Za-z .'-]+$/";
- 
-  if(!preg_match($string_exp,$name)) {
-    $error_message .= 'The name you entered does not appear to be valid.<br />';
-  }
+    $to_email = $request->email;
 
- 
-  if(!preg_match($string_exp,$message)) {
-    $error_message .= 'The message you entered does not appear to be valid.<br />';
-  }
- 
+    $contact = "<p><strong>Name:</strong>$from_name</p><p><strong>Email:</strong> $from_email</p>";
 
- 
-    $email_message = "Yhteydenoton tiedot: \n\n";
- 
+    $email_subject = "Angular Php Email Example: Neue Nachricht von $from_name erhalten";
 
-    function clean_string($string) {
-      $bad = array("content-type","bcc:","to:","cc:","href");
-      return str_replace($bad,"",$string);
-    }
- 
+    $email_body = '<html><body>';
+    $email_body .= "$<p><strong>Name:</strong>$from_name</p><p><strong>Email:</strong> $from_email</p>
+                    <p>$message</p>";
+    $email_body .= '</body></html>';
 
- 
-    $email_message .= "Name: ".clean_string($name)."\n";
-    $email_message .= "Email: ".clean_string($email)."\n";
-    $email_message .= "Message: ".clean_string($message)."\n";
+    $headers .= "MIME-Version: 1.0\r\n";
+    $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+    $headers .= "From: $from_email\n";
+    $headers .= "Reply-To: $from_email";
 
- 
-// create email headers
-$headers = 'From: '.$subject."\r\n".
-'Reply-To: '.$subject."\r\n" .
-'X-Mailer: PHP/' . phpversion();
-@mail($email_to, "Otsikko", $email_message, $headers);
-?>
- 
-<!-- include your own success html here -->
- 
-Kiitos yhteydenotostasi!
- 
-<?php
- 
-}
+    mail($to_email,$email_subject,$email_body,$headers);
+
+    $response_array['status'] = 'success';
+    $response_array['from'] = $from_email;
+
+    echo json_encode($response_array);
+    echo json_encode($from_email);
+    header($response_array);
+    return $from_email;
 ?>

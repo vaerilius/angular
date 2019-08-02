@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ContainerComponent implements OnInit {
 image: string;
   constructor() {
-    this.image = 'assets/kuva2.jpeg';
+    this.image = 'assets/cv.png';
   }
 
   ngOnInit() {
