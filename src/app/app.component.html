@@ -1,23 +1,9 @@
-
 <app-navbar></app-navbar>
-
-<div data-spy="scroll" data-target="#navbar" data-offset="200">
-  <app-container></app-container>
-
-      <div class="col-md-12">
-        <app-about></app-about>
-      </div>
-      <div class="col-md-12">
-        <app-projects></app-projects>
-      </div>
-      <div class="col-md-12">
-        <app-contact></app-contact>
-      </div>
-
-
-
-  <app-footer id="footer"></app-footer>
+<div class="container" id="container">
+  <router-outlet></router-outlet>
 </div>
+<app-footer></app-footer>
+
 
 
 

@@ -1,3 +1,6 @@
-#navbar {
-  background-color: black;
+a {
+  color: aliceblue;
+}
+#nav {
+  margin-outside: 100px;
 }
