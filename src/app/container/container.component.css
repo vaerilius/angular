@@ -1,11 +1,5 @@
-
-li {
+.container {
   text-shadow: 2px 2px 2px black;
+}
 
-  vertical-align: alphabetic;
-  display: inline-flex;
-}
-h4, h1 {
-  text-shadow: 2px 2px  2px black;
-}
 

@@ -6,9 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./container.component.css']
 })
 export class ContainerComponent implements OnInit {
-image: string;
+image: string = 'assets/cv.png';
   constructor() {
-    this.image = 'assets/cv.png';
   }
 
   ngOnInit() {
