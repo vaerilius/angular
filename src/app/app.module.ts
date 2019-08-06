@@ -5,17 +5,16 @@ import { AppComponent } from './app.component';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
-import { ContainerComponent } from './container/container.component';
-import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { AboutComponent } from './about/about.component';
 import {RouterModule, Routes} from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
 
 const appRouters: Routes = [
   { path: '' , component: AppComponent},
-  { path: 'container' , component: ContainerComponent},
+  { path: 'home' , component: HomeComponent},
   { path: 'about' , component: AboutComponent},
   { path: 'projects' , component: ProjectsComponent},
   { path: 'contact' , component: ContactComponent}
@@ -26,12 +25,11 @@ const appRouters: Routes = [
   declarations: [
     AppComponent,
     NavbarComponent,
-    ContainerComponent,
-    FooterComponent,
     ContactComponent,
     ProjectsComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

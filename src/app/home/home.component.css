@@ -1,0 +1,7 @@
+#container {
+  margin-top: 100px;
+}
+h3, h1, hr, h5 {
+  text-shadow: 0 2px 2px #0377e9;
+  font-weight: 500;
+}
