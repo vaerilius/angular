@@ -1,10 +1,10 @@
 <div class="container " id="container">
   <div class="mx-auto">
     <hr class="bg-light shadow-lg">
-    <h1 class="jumbotron-heading display-4  text-center text-white pb-4">Timo Tamminen</h1>
+    <h1 class="jumbotron-heading display-4  text-center text-white pb-4">{{person.getFirstName()}} {{person.getLastName()}}</h1>
     <hr class="bg-light shadow-lg">
     <div class=" d-flex justify-content-center ">
-      <img class="card-profile-img rounded-circle border-right toast-body shadow-lg pb-2" [src]="image"
+      <img class="card-profile-img rounded-circle border-right toast-body shadow-lg pb-2" [src]="person.image"
            style="height: 14rem">
     </div>
     <h3 class="display-4 text-white p-1 text-center">Developer</h3>
