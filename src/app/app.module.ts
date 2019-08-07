@@ -10,13 +10,16 @@ import { ProjectsComponent } from './projects/projects.component';
 import { AboutComponent } from './about/about.component';
 import {RouterModule, Routes} from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 const appRouters: Routes = [
   { path: '' , component: HomeComponent},
   { path: 'about' , component: AboutComponent},
   { path: 'projects' , component: ProjectsComponent},
-  { path: 'contact' , component: ContactComponent}
+  { path: 'contact' , component: ContactComponent},
+  { path: 'not-found', component: PageNotFoundComponent},
+  { path: '**', redirectTo: '/not-found', pathMatch: 'full'}
 ];
 
 
@@ -28,7 +31,8 @@ const appRouters: Routes = [
     ProjectsComponent,
     AboutComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
