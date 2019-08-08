@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ProjectsService} from './projects.service';
 
 @Component({
   selector: 'app-projects',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent implements OnInit {
+  private projects: {id: number, name: string, syntax: string, framework: string}[] = [];
 
-  constructor() { }
+  constructor(private projectsService: ProjectsService) { }
 
   ngOnInit() {
+    this.projects = this.projectsService.getProjects();
   }
 
 }

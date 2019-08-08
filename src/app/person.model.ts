@@ -15,6 +15,7 @@ export class PersonModel {
     this.image = 'assets/cv.png';
   }
 
+
   getFirstName(): string {
     return this.fName;
   }
