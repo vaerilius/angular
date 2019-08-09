@@ -6,14 +6,17 @@ import {AboutComponent} from './about/about.component';
 import {ProjectsComponent} from './projects/projects.component';
 import {ContactComponent} from './contact/contact.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
-import {ProjectComponent} from './projects/project/project.component';
-import {ProjectResolverService} from './projects/project/project-resolver.service';
+import {ProjectComponent} from './projects/project-list/project/project.component';
+import {ProjectDetailComponent} from './projects/project-detail/project-detail.component';
+import {SelectProjectComponent} from './projects/select-project/select-project.component';
+
 
 const appRouters: Routes = [
   { path: '' , component: HomeComponent},
   { path: 'about' , component: AboutComponent},
   { path: 'projects' , component: ProjectsComponent, children: [
-      {path: ':id/:name', component: ProjectComponent, resolve: {project: ProjectResolverService}}
+      {path: '', component: SelectProjectComponent},
+      {path: ':id/:name', component: ProjectDetailComponent},
     ]},
   { path: 'contact' , component: ContactComponent},
   { path: 'not-found', component: PageNotFoundComponent},

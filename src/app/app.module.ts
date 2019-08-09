@@ -11,9 +11,11 @@ import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {PersonService} from './person.service';
 import {AppRoutingModule} from './app-routing.module';
-import { ProjectComponent } from './projects/project/project.component';
+import { ProjectComponent } from './projects/project-list/project/project.component';
 import {ProjectsService} from './projects/projects.service';
-import {ProjectResolverService} from './projects/project/project-resolver.service';
+import { ProjectListComponent } from './projects/project-list/project-list.component';
+import { ProjectDetailComponent } from './projects/project-detail/project-detail.component';
+import { SelectProjectComponent } from './projects/select-project/select-project.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,10 @@ import {ProjectResolverService} from './projects/project/project-resolver.servic
     ContactComponent,
     HomeComponent,
     PageNotFoundComponent,
-    ProjectComponent
+    ProjectComponent,
+    ProjectListComponent,
+    ProjectDetailComponent,
+    SelectProjectComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +38,7 @@ import {ProjectResolverService} from './projects/project/project-resolver.servic
     ReactiveFormsModule,
     AppRoutingModule
   ],
-  providers: [PersonService, ProjectResolverService, ProjectsService],
+  providers: [PersonService, ProjectsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

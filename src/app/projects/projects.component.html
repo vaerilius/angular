@@ -1,15 +1,13 @@
-<div class="container">
+
+<div class="d-flex justify-content-center text-center">
+<div class="container ">
   <div class="row">
-    <div class="col-ms-12 col-md-6 mt-3">
-      <div class="list-group">
-        <a  class="list-group-item list-group-item-action list-group-item-light"
-            [routerLink]="['/projects', project.id, project.name]"
-           href="#" *ngFor="let project of projects">
-          {{project.name}}</a>
-      </div>
+    <div class="col-ms-12 col-md-4 p-2">
+      <app-project-list></app-project-list>
     </div>
-    <div class="col-ms-12 col-md-6 mt-3">
+    <div class="col-sm-12 col-md-8 p-2 ">
       <router-outlet></router-outlet>
     </div>
   </div>
+</div>
 </div>

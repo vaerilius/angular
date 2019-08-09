@@ -1,36 +1,20 @@
+import {Project} from './project.model';
+import {Injectable} from '@angular/core';
+
+@Injectable()
 export class ProjectsService {
-  private projects = [
-    {
-      id: 1,
-      name: 'Asteroids 1',
-      syntax: 'Java',
-      framework: 'JavaFX'
-    },
-    {
-      id: 2,
-      name: 'FinnKino app 2',
-      syntax: 'JavaScript',
-      framework: 'jQuery'
-    }, {
-      id: 3,
-      name: 'Recipe app 3',
-      syntax: 'TypeScript',
-      framework: 'AngularJs'
-    },
+
+  private projects: Project[] = [
+    new Project(1, 'Asteroids 1', 'Java', 'JavaFX', 'liirumlaarum'),
+    new Project(2, 'FinnKino app 2', 'JavaScrip', 'jQuery', 'liirumlaarum'),
+    new Project(3, 'Recipe app 3', 'TypeScript', 'AngularJs', 'liirumlaarum')
   ];
 
   getProjects() {
-    return this.projects;
+    return this.projects.slice();
   }
 
   getProject(id: number) {
-    const project = this.projects.find(
-      (p) => {
-        return p.id === id;
-      }
-    );
-    return project;
+    return this.projects[id];
   }
-
-
 }
