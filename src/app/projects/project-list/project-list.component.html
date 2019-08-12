@@ -1,10 +1,8 @@
 
-<div class="row">
-  <div class="col-xs-12">
+<div class="list-group">
     <app-project
       *ngFor="let projectElement of projects; let i = index"
       [project]="projectElement"
       [index]="i"
     [name]="projectElement.name"></app-project>
-  </div>
 </div>

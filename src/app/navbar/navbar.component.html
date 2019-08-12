@@ -1,21 +1,41 @@
 
-<nav class="navbar navbar-light bg-transparent justify-content-md-center" id="nav">
-  <ul class="nav nav-tabs border-0 ">
-    <li class="bg-transparent">
-      <a class="navbar-brand disabled"><i class="fa fa-code text-white"></i></a>
-    </li>
-    <li class="nav-item active ">
-      <a class="nav-link " routerLink="/">Home <span class="sr-only">(current)</span></a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/about">About</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/projects">Projects</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/contact">Contact</a>
-    </li>
+
+
+<nav class="navbar navbar-expand-md navbar-light bg-transparent justify-content-md-center " >
+  <ul class="nav nav-tabs border-0 m-0">
+<!--    <li class="nav-item active ">-->
+<!--      <a class="nav-link " routerLink="/">Home <span class="sr-only">(current)</span></a>-->
+<!--    </li>-->
+<!--    <li class="nav-item">-->
+<!--      <a class="nav-link" routerLink="/about">About</a>-->
+<!--    </li>-->
+<!--    <li class="nav-item">-->
+<!--      <a class="nav-link" routerLink="/projects">Projects</a>-->
+<!--    </li>-->
+<!--    <li class="nav-item">-->
+<!--      <a class="nav-link" routerLink="/contact">Contact</a>-->
+<!--    </li>-->
+    <button class="navbar-toggler " type="button"
+            (click)="toggleNavbar()">
+      <span class="navbar-toggler-icon"> </span>
+    </button>
+    <div class="collapse navbar-collapse"
+         [ngClass]="{'show': isCollapsed}">
+
+      <li class="nav-item active ">
+        <a class="nav-link " routerLink="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/projects">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contact">Contact</a>
+      </li>
+    </div>
+
   </ul>
 </nav>
 

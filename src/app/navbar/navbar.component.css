@@ -4,5 +4,6 @@ a {
   font-weight: 700;
   font-size: large;
 }
-
-
+.navbar-toggler {
+  background-color: #ECEFF1;
+}
