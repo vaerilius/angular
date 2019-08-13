@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Project} from '../project.model';
 import {ProjectsService} from '../projects.service';
 
@@ -10,7 +10,8 @@ import {ProjectsService} from '../projects.service';
 export class ProjectListComponent implements OnInit {
   projects: Project[];
 
-  constructor(private projectService: ProjectsService) { }
+  constructor(private projectService: ProjectsService) {
+  }
 
   ngOnInit() {
     this.projects = this.projectService.getProjects();

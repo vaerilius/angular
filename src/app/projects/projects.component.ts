@@ -10,8 +10,13 @@ import {ProjectsService} from './projects.service';
 export class ProjectsComponent implements OnInit {
 
   constructor(private projectsService: ProjectsService) { }
+  isCollapsed = false;
 
   ngOnInit() {
 
+  }
+
+  onToggle() {
+    this.isCollapsed = !this.isCollapsed;
   }
 }
