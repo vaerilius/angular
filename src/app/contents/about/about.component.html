@@ -1,0 +1,68 @@
+<div class="col-md-12 mb-4 ">
+        <div class="card border-0 shadow">
+          <h6 class="card-header shadow text-center text-uppercase font-weight-bold pb-2 display-4">About me</h6>
+      
+          <img
+            [src]="pic"
+            style=" max-height: 360px; max-width: 500px;"
+            class="card-img-top mx-auto p-3 rounded-circle">
+          <div class="card-body text-center">
+            <h5 class="display-5 p-2">The four most important areas of life: family, health, work and leisure </h5>
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-4 text-left border shadow-sm rounded">
+                  <p class=" text-monospace">Title: {{person.person.getTitle()}} </p>
+                  <p class="text-monospace">Phone: {{person.getPerson().gePhone()}} </p>
+                  <p class="text-monospace">Mail: {{person.getPerson().getMail()}}</p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 text-left text-md-center border shadow-sm rounded">
+                  <div class="text-monospace">Web Developer</div>
+                  <div class="text-monospace">Software Developer</div>
+                  <div class="text-monospace">Dad && husband</div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 text-left text-lg-right border shadow-sm rounded">
+                  <div class="card-text ">
+                    <p class="text-monospace">liirumia </p> </div>
+      
+                </div>
+              </div>
+            </div>
+            <div class="container mt-4 py-3">
+              <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-4 ">
+                  <h6 class="card-title display-4 border-bottom">Family</h6>
+      
+                  <img class="card-img-top img-fluid" alt="Card image cap" [src]="family" style=" width: 15rem;">
+                  <div class="card-body">
+                    <p class="card-text text-left">I have two boys and a wonderful wife.
+                      Now the boys are two and five years old.
+                      About ten years ago I met my wife on a Tallinn cruise :)
+                      They fill my life every day and there is no dull moment in my life. </p>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                  <h6 class="card-title display-4 border-bottom">Work</h6>
+      
+                  <img class="card-img-top" alt="Card image cap" [src]="work" style="width: 14rem">
+                  <div class="card-body">
+                    <p class="card-text">Click and download my CV.</p>
+                    <p class="card-text text-left text-md-center">My previous career was in a power plant industry as a process operator
+                      but I changed my career to IT because I've always wanted to learn to code.
+                   Now I'm studying coding at Laurea University of Applied sciences and I can't wait to
+                      get to work as a developer.</p>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                  <h6 class="card-title display-4 border-bottom">Leisure</h6>
+      
+                  <img class="card-img-top" alt="Card image cap" [src]="hobbies" style="width: 12rem">
+                  <div class="card-body">
+                    <p class="card-text text-left text-lg-right">In my free time I go to gym, play with my children, eat pizza and, of course, study
+                      new code. I really love pizza =)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
