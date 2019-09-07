@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit} from '@angular/core';
+import * as jQuery from 'jquery';
 
 @Component({
   selector: 'app-navbar',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  isShown = false;
 
-  constructor() { }
+  constructor(private elRef: ElementRef) { }
 
   ngOnInit() {
   }
+
 
 }

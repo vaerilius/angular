@@ -1,0 +1,12 @@
+
+h1 {
+  margin-top: 4vh;
+  color: whitesmoke;
+  text-shadow: 2px 4px #2d3a4f;
+  font-size: 3rem;
+}
+
+ h3, h5{
+  color: whitesmoke;
+  text-shadow: 1px 1px  #2d3a4f;
+}
