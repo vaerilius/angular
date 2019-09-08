@@ -11,6 +11,7 @@ import { ForumComponent } from './contents/contact/forum/forum.component';
 import { MailComponent } from './contents/contact/mail/mail.component';
 import { RoutingModule } from './routing.module';
 import {SharedModule} from './shared/shared.module';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import {SharedModule} from './shared/shared.module';
   imports: [
     BrowserModule,
     RoutingModule,
-    SharedModule
+    SharedModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

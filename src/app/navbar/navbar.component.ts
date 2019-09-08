@@ -1,5 +1,5 @@
 import {Component, ElementRef, OnInit} from '@angular/core';
-import * as jQuery from 'jquery';
+import {faGithub, faLinkedinIn} from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-navbar',
@@ -7,7 +7,8 @@ import * as jQuery from 'jquery';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  isShown = false;
+github = faGithub
+linked = faLinkedinIn
 
   constructor(private elRef: ElementRef) { }
 

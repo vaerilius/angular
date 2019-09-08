@@ -1,6 +1,16 @@
-a {
-  color: whitesmoke;
-  font-size: larger;
+a.nav-link {
+color: #c9d0c8 ;
   font-weight: bolder;
-  text-shadow: 1px 1px #2d3a4f;
+  text-shadow: darkgrey;
+}
+/*a.nav-link:hover { color: whitesmoke !important; }*/
+/*a.nav-link:focus:active {*/
+/*   color: white !important;*/
+/*   text-shadow: darkgrey;*/
+/* }*/
+fa-icon {
+
+
+  padding: 1px;
+  size: auto;
 }

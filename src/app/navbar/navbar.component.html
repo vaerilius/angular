@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-sm navbar-dark bg-transparent">
-  <a class="navbar-brand" routerLink="/">Logo</a>
+
   <div >
     <button class="navbar-toggler" type="button"
             data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -8,24 +8,42 @@
     </button>
   </div>
 
-  <div class="collapse navbar-collapse"  id="navbarSupportedContent" >
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item " routerLinkActivate="active">
-        <a class="nav-link" routerLink="/about">About <span class="sr-only">(current)</span></a>
+  <div class="collapse navbar-collapse text-uppercase "  id="navbarSupportedContent" >
+    <ul class="nav nav-tabs "  role="tablist">
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" routerLink="/">Home</a>
+      </li>
+      <li class="nav-item "   routerLinkActivate="active">
+        <a class="nav-link" data-toggle="tab"  routerLink="/about">About <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item" routerLinkActivate="active">
-        <a class="nav-link" routerLink="/projects">Projects</a>
+        <a class="nav-link" data-toggle="tab" routerLink="/projects">Projects</a>
       </li>
       <li class="nav-item" routerLinkActivate="active">
-        <a class="nav-link" routerLink="/contact">Contact</a>
+        <a class="nav-link" data-toggle="tab" routerLink="/contact">Contact</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle " data-toggle="dropdown"  role="button"
+           aria-haspopup="true" aria-expanded="false">Links</a>
+        <div class="dropdown-menu ">
+
+              <a class="dropdown-item" href="https://github.com/vaerilius" target="_blank">
+                <p class="text-dark">GitHub   <fa-icon [icon]="github" class="rounded-circle fa-lg" ></fa-icon></p>
+              </a>
+              <a class="dropdown-item" href="https://www.linkedin.com/in/timo-tamminen11/" target="_blank">
+                <p class="text-dark">LinkedIn <fa-icon [icon]="linked" class="rounded-circle fa-lg" ></fa-icon></p>
+
+              </a>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+  <div class="d-flex justify-content-end">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" >Login</a>
       </li>
     </ul>
-    <div class="d-flex justify-content-end">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link">Login</a>
-        </li>
-      </ul>
-    </div>
   </div>
 </nav>

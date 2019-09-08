@@ -1,7 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-  background-size: cover;
+  background-image: url("/assets/Frost.jpg");
+  background-position: center center;
   background-repeat: no-repeat;
-  background-image: url("/assets/deglee-degi-wQImoykAwGs-unsplash.jpg");
-  color: whitesmoke;
+  background-attachment: fixed;
+  background-size: cover;
 }
