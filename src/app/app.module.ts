@@ -12,6 +12,8 @@ import { MailComponent } from './contents/contact/mail/mail.component';
 import { RoutingModule } from './routing.module';
 import {SharedModule} from './shared/shared.module';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import { ProjectComponent } from './contents/projects/project-list/project/project.component';
+import { ProjectListComponent } from './contents/projects/project-list/project-list.component';
 
 
 @NgModule({
@@ -24,6 +26,8 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
     ContactComponent,
     ForumComponent,
     MailComponent,
+    ProjectComponent,
+    ProjectListComponent,
   ],
   imports: [
     BrowserModule,
